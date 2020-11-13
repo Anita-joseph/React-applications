@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 const qBank = [{
         question: "how build the app ?",
         answers: ["vinayak", "sarthak", "somil", "devesh"],

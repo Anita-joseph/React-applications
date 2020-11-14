@@ -1,0 +1,68 @@
+main>h1 {
+    text-align: center;
+}
+
+#root {
+    background-color: #17b8b5;
+}
+
+main {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.card {
+    border-radius: 3px;
+    padding: 20px;
+    position: absolute;
+    box-shadow: 3px 3px 1em gray, -1em 0 1em gray;
+}
+
+img {
+    width: 150px;
+    border-radius: 50%;
+    margin: 0 auto;
+    position: relative;
+    top: -90px;
+    left: 30%;
+}
+
+.green {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    height: 120px;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    background-color: #17b8b5;
+}
+
+.white {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    background-color: #fff;
+    height: 120px;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+span {
+    width: 220px;
+    color: gray;
+    display: flex;
+    justify-content: space-around;
+    align-items: space-around;
+    font-weight: bold;
+    font-size: 12px
+}
+
+figcaption {
+    font-size: 20px;
+    line-height: 1;
+}

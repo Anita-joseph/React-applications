@@ -3,15 +3,47 @@
 
 <head>
     <title>Reactjs | Page d'accueil</title>
-    <meta charset="utf-8">
+    <link rel="icon" type="image/svg" href=" logo.svg " />
+    <meta charset="utf-8 ">
 </head>
 <style>
     img {
-        width: 120px;
+        width: 30px;
+    }
+    
+    .main {
+        width: 50%;
+        margin: 0 auto;
+    }
+    
+    .main ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .container {
+        display: grid;
+        height: 100vh;
+        grid-template-rows: auto 1fr auto;
     }
 </style>
 
 <body>
-    <h1>React Applications | Home Page</h1><img src="logo.svg" alt="logo " /></body>
+    <div class="container ">
+        <h1><img src="logo.svg " alt="logo " />React Applications | Home Page</h1>
+        <div class="main">
+            <h3>Liste des applications en Reactjs</h3>
+            <ul>
+                <li>
+                    <a href="quiz/public/index.html">Build a Quiz app</a> </li>
+                <li>
+                    <a href="moviesearch/public/index.html">Build a Moviesearch</a></li>
+                <li>
+                    <a href="speedtypinggame/public/index.html">Build a speedtyping game app</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
 
 </html>

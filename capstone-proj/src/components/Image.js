@@ -1,39 +1,64 @@
-import React, { useState, useEffect } from "react"
+/* eslint-disable jsx-a11y/alt-text */
+import React, { useState, useContext } from "react"
+import PropTypes from "prop-types"
 
-const Context = React.createContext()
+import { Context } from "../Context"
 
-function ContextProvider({ children }) {
-    const [allPhotos, setAllPhotos] = useState([])
-    const [cartItems, setCartItems] = useState([])
+function Image({ className, img }) {
+    const [hovered, setHovered] = useState(false)
+    const { toggleFavorite, addToCart, cartItems, removeFromCart } = useContext(Context)
 
-    const url = "https://raw.githubusercontent.com/bobziroll/scrimba-react-bootcamp-images/master/images.json"
-    useEffect(() => {
-        fetch(url)
-            .then(res => res.json())
-            .then(data => setAllPhotos(data))
-    }, [])
-
-    function toggleFavorite(id) {
-        const updatedArr = allPhotos.map(photo => {
-            if (photo.id === id) {
-                return {...photo, isFavorite: !photo.isFavorite }
-            }
-            return photo
-        })
-
-        setAllPhotos(updatedArr)
+    function heartIcon() {
+        if (img.isFavorite) {
+            return <i className = "ri-heart-fill favorite"
+            onClick = {
+                () => toggleFavorite(img.id)
+            } > < /i>
+        } else if (hovered) {
+            return <i className = "ri-heart-line favorite"
+            onClick = {
+                () => toggleFavorite(img.id)
+            } > < /i>
+        }
     }
 
-    function addToCart(newItem) {
-        setCartItems(prevItems => [...prevItems, newItem])
+    function cartIcon() {
+        const alreadyInCart = cartItems.some(item => item.id === img.id)
+        if (alreadyInCart) {
+            return <i className = "ri-shopping-cart-fill cart"
+            onClick = {
+                () => removeFromCart(img.id)
+            } > < /i>
+        } else if (hovered) {
+            return <i className = "ri-add-circle-line cart"
+            onClick = {
+                () => addToCart(img)
+            } > < /i>
+        }
     }
 
     return ( <
-        Context.Provider value = {
-            { allPhotos, toggleFavorite, addToCart }
-        } > { children } <
-        /Context.Provider>
+        div className = { `${className} image-container` }
+        onMouseEnter = {
+            () => setHovered(true)
+        }
+        onMouseLeave = {
+            () => setHovered(false)
+        } >
+        <
+        img src = { img.url }
+        className = "image-grid" / > { heartIcon() } { cartIcon() } <
+        /div>
     )
 }
 
-export { ContextProvider, Context }
+Image.propTypes = {
+    className: PropTypes.string,
+    img: PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        url: PropTypes.string.isRequired,
+        isFavorite: PropTypes.bool
+    })
+}
+
+export default Image

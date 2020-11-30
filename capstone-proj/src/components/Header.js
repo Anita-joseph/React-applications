@@ -13,8 +13,8 @@ function Header() {
         <
         Link to = "/cart" >
         <
-        i className = { `${cartClassName} ri-fw ri-2x` } > < /i>  < /
-        Link > <
+        i className = { `${cartClassName} ri-fw ri-2x` } > < /i> <
+        /Link> <
         /header>
     )
 }

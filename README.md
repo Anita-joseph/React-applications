@@ -6,7 +6,7 @@
 #### Build speed Typing Game
 ===================================================
 ## Reusable component
-## componud component
+## compound component
 
 #### Accordion coponent
 #### Date picker component

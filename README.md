@@ -2,7 +2,7 @@
 
 #### Build a movie search application
 #### Build a Quiz app
-#### Build a profile card app
+#### Build a Profile Card UI Design
 #### Build speed Typing Game
 ===================================================
 ## Reusable component

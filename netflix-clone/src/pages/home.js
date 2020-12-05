@@ -3,6 +3,8 @@ import Jumbotron from '../components/jumbotron'
 
 export default function Home() {
 	return (
+		<Jumbotron.Container>
 		<p>I am home</p>
+		<Jumbotron.Container/>
 	)
 }

@@ -5,13 +5,14 @@ import { App } from './App';
 import { FirebaseContext } from './context/firebase';
 
 const config = {
-	apiKey: '',
-	authDomain: '',
-	databaseURL: '',
-	projectId: '',
-	storageBucket: '',
-	messagingSenderId: '',
-	appId: '',
+		apiKey: "AIzaSyAVQe78aNrlliTggoL8scWPI_-6xEjNoY8",
+		authDomain: "aj-netflix.firebaseapp.com",
+		databaseURL: "https://aj-netflix-default-rtdb.europe-west1.firebasedatabase.app",
+		projectId: "aj-netflix",
+		storageBucket: "aj-netflix.appspot.com",
+		messagingSenderId: "867121128397",
+		appId: "1:867121128397:web:03a09167ee6fc1ca7a9a84",
+		measurementId: "G-1XX3G2P1FR"
 }
 
 const firebase = window.firebase.initializeApp(config);

@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { GlobalStyles } from './global-styles';
 import { App } from './App';
 import { FirebaseContext } from './context/firebase';
+// import { seedDatabase } from './seed';
 
 const config = {
 		apiKey: "AIzaSyAVQe78aNrlliTggoL8scWPI_-6xEjNoY8",

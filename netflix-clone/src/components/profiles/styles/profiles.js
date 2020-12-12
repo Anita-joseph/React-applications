@@ -38,9 +38,9 @@ export const Name = styled.p`
 export const Picture = styled.img`
     width: 100%;
     max-width: 150px;
+	border-radius:50%;
     height: auto;
     border: 3px solid black;
-	border-radius:50%;
     cursor: pointer;
 `;
 

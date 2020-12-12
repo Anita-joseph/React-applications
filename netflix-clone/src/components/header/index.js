@@ -73,27 +73,26 @@ Header.Feature = function HeaderFeature({ children, ...restProps }) {
 	return <Feature {...restProps}>{children}</Feature>
 }
 
-
 Header.FeatureCallOut = function HeaderFeatureCallOut({ children, ...restProps }) {
-    return <FeatureCallOut {...restProps}>{children}</FeatureCallOut>
+	return <FeatureCallOut {...restProps}>{children}</FeatureCallOut>
 }
 
 Header.PlayButton = function HeaderPlayButton({ children, ...restProps }) {
-    return <PlayButton {...restProps}>{children}</PlayButton>
+	return <PlayButton {...restProps}>{children}</PlayButton>
 }
 
 Header.Profile = function HeaderProfile({ children, ...restProps }) {
-    return (
-        <Profile {...restProps}>
-            {children}
-        </Profile>
-    )
+	return (
+		<Profile {...restProps}>
+			{children}
+		</Profile>
+	)
 }
 
 Header.Picture = function HeaderPicture({ src, ...restProps }) {
-    return <Picture {...restProps} src={`/images/user/${src}.png`} />;
+	return <Picture {...restProps} src={`/images/users/${src}.png`} />;
 }
 
 Header.Dropdown = function HeaderDRopdown({ children, ...restProps }) {
-    return <Dropdown {...restProps}>{children}></Dropdown>;
+	return <Dropdown {...restProps}>{children}</Dropdown>;
 }

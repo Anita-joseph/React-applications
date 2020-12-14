@@ -12,7 +12,7 @@ export default function selectionMap({ series, films }) {
 			{ title: 'Thriller', data: films.filter((item) => item.genre === 'thriller') },
 			{ title: 'Children', data: films.filter((item) => item.genre === 'children') },
 			{ title: 'Suspense', data: films.filter((item) => item.genre === 'suspense') },
-			{ title: 'Romance', data: series.filter((item) => item.genre === 'romance') },
+			{ title: 'Romance', data: films.filter((item) => item.genre === 'romance') },
 		]
 	}
 }

@@ -1,3 +1,4 @@
+/* eslint-disable */
 import styled from 'styled-components';
 
 export const Title = styled.p`
@@ -122,7 +123,7 @@ export const Item = styled.div`
 export const FeatureText = styled.p`
     font-size: 18px;
     color: white;
-    ${'' /* font-weight: ${({ fontWeight }) => { fontWeight == 'bold' ? 'bold' : 'normal' }}; */}
+    font-weight: ${({ fontWeight }) => { fontWeight === 'bold' ? 'bold' : 'normal' }};
     margin: 0;
     
     @media (max-width: 800px) {

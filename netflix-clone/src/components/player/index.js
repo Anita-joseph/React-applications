@@ -1,5 +1,6 @@
 import React, { useState, useContext, createContext } from 'react';
 import ReactDOM from 'react-dom';
+import { Container, Overlay, Inner, Button} from './styles/player';
 
 export const PlayerContext = createContext();
 
